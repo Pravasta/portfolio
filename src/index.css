@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@layer base {
+  :root {
+    --background: 225 25% 4%;
+    --foreground: 210 20% 92%;
+
+    --card: 225 25% 7%;
+    --card-foreground: 210 20% 92%;
+
+    --popover: 225 25% 6%;
+    --popover-foreground: 210 20% 92%;
+
+    --primary: 220 70% 55%;
+    --primary-foreground: 225 25% 4%;
+
+    --secondary: 225 20% 12%;
+    --secondary-foreground: 210 20% 92%;
+
+    --muted: 225 15% 15%;
+    --muted-foreground: 220 10% 55%;
+
+    --accent: 220 70% 55%;
+    --accent-foreground: 225 25% 4%;
+
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 210 20% 92%;
+
+    --border: 225 15% 15%;
+    --input: 225 15% 15%;
+    --ring: 220 70% 55%;
+
+    --radius: 0.75rem;
+
+    /* Custom navy design tokens */
+    --navy-50: 220 30% 95%;
+    --navy-100: 220 30% 88%;
+    --navy-200: 220 35% 75%;
+    --navy-300: 220 40% 62%;
+    --navy-400: 220 55% 50%;
+    --navy-500: 220 70% 45%;
+    --navy-600: 220 75% 38%;
+    --navy-700: 222 80% 30%;
+    --navy-800: 224 85% 22%;
+    --navy-900: 225 90% 15%;
+
+    /* Elegant gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(220 70% 55%) 0%, hsl(240 60% 45%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(225 25% 4%) 0%, hsl(225 30% 2%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(225 25% 8%) 0%, hsl(225 25% 5%) 100%);
+    --gradient-glow: radial-gradient(ellipse at center, hsl(220 70% 55% / 0.12) 0%, transparent 70%);
+    --gradient-accent: linear-gradient(135deg, hsl(220 70% 55%) 0%, hsl(260 60% 50%) 100%);
+
+    /* Elegant shadows */
+    --shadow-glow: 0 0 80px hsl(220 70% 55% / 0.2);
+    --shadow-card: 0 8px 32px hsl(225 30% 2% / 0.6);
+    --shadow-elevated: 0 16px 48px hsl(225 30% 2% / 0.8);
+    --shadow-inner: inset 0 1px 0 hsl(220 20% 20% / 0.3);
+
+    --font-display: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  .dark {
+    --background: 225 25% 4%;
+    --foreground: 210 20% 92%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-display);
+    background: var(--gradient-dark);
+  }
+
+  ::selection {
+    @apply bg-primary/30 text-foreground;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-accent);
+  }
+
+  .glass-card {
+    @apply backdrop-blur-xl border border-border/40;
+    background: linear-gradient(145deg, hsl(225 25% 8% / 0.9) 0%, hsl(225 25% 5% / 0.95) 100%);
+    box-shadow: var(--shadow-card), var(--shadow-inner);
+  }
+
+  .glass-card:hover {
+    border-color: hsl(var(--primary) / 0.3);
+    box-shadow: var(--shadow-elevated), 0 0 30px hsl(var(--primary) / 0.1);
+  }
+
+  .glow-effect {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .floating-element {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .tech-badge {
+    @apply px-4 py-2 rounded-lg text-sm font-medium;
+    @apply transition-all duration-300;
+    background: linear-gradient(135deg, hsl(225 20% 12%) 0%, hsl(225 20% 10%) 100%);
+    border: 1px solid hsl(225 15% 18%);
+  }
+
+  .tech-badge:hover {
+    border-color: hsl(var(--primary) / 0.5);
+    background: linear-gradient(135deg, hsl(225 20% 15%) 0%, hsl(225 20% 12%) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px hsl(var(--primary) / 0.15);
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .elegant-border {
+    border: 1px solid transparent;
+    background: linear-gradient(hsl(225 25% 7%), hsl(225 25% 7%)) padding-box,
+                linear-gradient(135deg, hsl(var(--primary) / 0.3), transparent 50%) border-box;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
