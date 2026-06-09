@@ -5,17 +5,17 @@ import { Button } from '@/components/ui/button';
 const techStack = [
   { name: 'Flutter', icon: 'https://skillicons.dev/icons?i=flutter' },
   { name: 'Dart', icon: 'https://skillicons.dev/icons?i=dart' },
+  { name: 'Figma', icon: 'https://skillicons.dev/icons?i=figma' },
+  { name: 'Go', icon: 'https://skillicons.dev/icons?i=go' },
+  { name: 'PostgreSQL', icon: 'https://skillicons.dev/icons?i=postgres' },
   { name: 'Laravel', icon: 'https://skillicons.dev/icons?i=laravel' },
   { name: 'PHP', icon: 'https://skillicons.dev/icons?i=php' },
   { name: 'Git', icon: 'https://skillicons.dev/icons?i=git' },
-  { name: 'Figma', icon: 'https://skillicons.dev/icons?i=figma' },
   { name: 'VS Code', icon: 'https://skillicons.dev/icons?i=vscode' },
   { name: 'Postman', icon: 'https://skillicons.dev/icons?i=postman' },
   { name: 'HTML', icon: 'https://skillicons.dev/icons?i=html' },
-  { name: 'Go', icon: 'https://skillicons.dev/icons?i=go' },
   { name: 'REST API', icon: 'https://skillicons.dev/icons?i=network' },
   { name: 'MySQL', icon: 'https://skillicons.dev/icons?i=mysql' },
-  { name: 'PostgreSQL', icon: 'https://skillicons.dev/icons?i=postgres' },
   { name: 'Firebase', icon: 'https://skillicons.dev/icons?i=firebase' },
   { name: 'Supabase', icon: 'https://skillicons.dev/icons?i=supabase' },
   { name: 'Sqlite', icon: 'https://skillicons.dev/icons?i=sqlite' },
@@ -62,7 +62,7 @@ export const HeroSection = () => {
               transition={{ delay: 0.4, duration: 0.6 }}
               className="text-xl md:text-2xl lg:text-3xl text-muted-foreground font-medium mb-6"
             >
-              Flutter Developer
+              Fullstack Developer
             </motion.h2>
 
             <motion.p
@@ -71,9 +71,9 @@ export const HeroSection = () => {
               transition={{ delay: 0.5 }}
               className="text-muted-foreground text-base md:text-lg max-w-xl mb-8"
             >
-              Passionate about creating beautiful, performant mobile applications 
-              with Flutter. Currently exploring AI integration, backend development 
-              with Laravel, and learning GO for real-time applications.
+              Passionate about building high-performance mobile applications with Flutter
+  and scalable backend services with Go. Always eager to learn new technologies
+  and take on challenges that foster growth and innovation.
             </motion.p>
 
             <motion.div
@@ -86,7 +86,9 @@ export const HeroSection = () => {
                 <a href="#contact">Get in Touch</a>
               </Button>
               <Button variant="glass" size="lg" asChild>
-                <a href="#projects">View Projects</a>
+                <a href="https://docs.google.com/document/d/1aWWbwP1ed075FOJKzicsNYLz1k-4-qQ9TZXO5t2hdK8/edit?tab=t.0" target="_blank" rel="noopener noreferrer">
+                  Lihat CV
+                </a>
               </Button>
             </motion.div>
 

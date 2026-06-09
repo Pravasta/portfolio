@@ -14,50 +14,107 @@ import {
 import { useState } from 'react';
 
 const projects = [
+  // {
+  //   title: 'JualinFnb (Launching Soon)',
+  //   description:
+  //     'An all-in-one Point of Sale platform for food and beverage businesses, built by a team of three founders. I contribute to the development of the Flutter application while collaborating on product design, system architecture, and feature planning. The platform includes a cashier app, business dashboard, and landing page, with support for inventory management, reporting, multi-store operations, and resilient online-first transactions with offline fallback capabilities.',
+  //   image: '🚀',
+  //   technologies: [
+  //     'Flutter',
+  //     'Node.js',
+  //     'React',
+  //     'PostgreSQL',
+  //     'SQLite',
+  //     'Figma',
+  //     'REST API',
+  //   ],
+  //   github: '#',
+  //   demo: '#',
+  //   color: 'from-sky-500/20 to-blue-500/20',
+  // },
   {
-    title: 'POS Application',
-    description: 'A POS application designed specifically for small and medium-sized businesses (UMKM). This application offers a complete set of features including real-time stock tracking, sales transaction processing and receipt printing, detailed reporting and analytics, reservation and seating management, integrated payment gateways, offline and online operation modes, multi-store management for different types of businesses, staff and customer management, cashier opening and closing, subscription management, AI integration, and many more tools to support daily operations efficiently.',
+    title: 'Point of Sale (POS) System',
+    description:
+      'Professional project developed at PT Sadavir Utama Nusamedia. A multi-platform POS solution built with Flutter for Android, iOS, macOS, and Linux. Features include offline-first transactions using SQLite, real-time synchronization via WebSocket, inventory management, receipt printing, cashier operations, QR/barcode scanning, and POS hardware integration. Currently in final development and preparing for production release.',
     image: '🧾',
-    technologies: ['Flutter', 'Node.js', 'MySQL', 'SQLite', 'Firebase'],
-    github: 'https://github.com',
-    demo: 'https://example.com',
+    technologies: [
+      'Flutter',
+      'Go',
+      'SQLite',
+      'WebSocket',
+      'MySQL',
+      'Firebase',
+    ],
+    github: '#',
+    demo: '#',
     color: 'from-blue-500/20 to-cyan-500/20',
   },
+
+  {
+    title: 'Infusion Monitoring System',
+    description:
+      'A real-time healthcare monitoring application developed for client operations. Built using Flutter and Go with WebSocket technology to provide live infusion status updates, device identification, event monitoring, and critical alert notifications. Successfully deployed and actively used in operational environments.',
+    image: '🏥',
+    technologies: [
+      'Flutter',
+      'Go',
+      'WebSocket',
+      'Bloc',
+      'REST API',
+      'VPS',
+    ],
+    github: 'https://github.com/Pravasta/health_reminder',
+    demo: 'https://github.com/Pravasta/health_reminder',
+    color: 'from-red-500/20 to-orange-500/20',
+  },
+
   {
     title: 'Qobiltu Indonesia',
-    description: 'An application designed to facilitate the Islamic marriage process, including ta’aruf, nadzhor, and khitbah, in a structured, respectful, and sharia-compliant manner.This platform helps individuals and families connect through a guided process that prioritizes values, intentions, and transparency. It provides features for profile introduction based on personal values and background, supervised communication, family involvement, scheduled nadzhor sessions, khitbah planning, and proper documentation throughout each stage. The application aims to support sincere intentions toward marriage while maintaining ethical boundaries, privacy, and cultural sensitivity.',
+    description:
+      'Mobile application developed for Qobiltu Indonesia, a platform supporting the Islamic marriage process including ta’aruf, nadzhor, and khitbah. Responsible for Flutter development, REST API integration, Firebase Authentication, analytics, push notifications, and implementation of the design system from Figma.',
     image: '💍',
-    technologies: ['Flutter', 'Dart', 'Firebase', 'REST API', 'Figma'],
+    technologies: [
+      'Flutter',
+      'Firebase',
+      'REST API',
+      'Figma',
+      'Analytics',
+    ],
     github: 'https://qobiltu.id/',
     demo: 'https://qobiltu.id/',
     color: 'from-purple-500/20 to-pink-500/20',
   },
+
+  {
+    title: 'Recycle Management System',
+    description:
+      'An internal enterprise application developed for recycling operations management. Built with Flutter to support cross-platform workflows, order management, material tracking, and operational reporting. Focused on responsive user interfaces, maintainable architecture, and seamless backend integration.',
+    image: '♻️',
+    technologies: [
+      'Flutter',
+      'REST API',
+      'Linux',
+      'Android',
+      'Cross Platform',
+    ],
+    github: '#',
+    demo: '#',
+    color: 'from-green-500/20 to-emerald-500/20',
+  },
+
   {
     title: 'Madang App',
-    description: 'Preferred to save in favorite food list and create schedule for meal planning.',
+    description:
+      'A meal planning application that helps users organize daily meals, save favorite foods, and create personalized eating schedules. Built as a personal project to explore mobile application development and user-centered design.',
     image: '🍜',
-    technologies: ['Flutter', 'Dart', 'REST API'],
+    technologies: [
+      'Flutter',
+      'Dart',
+      'REST API',
+    ],
     github: 'https://github.com/Pravasta/MadangApp',
     demo: 'https://github.com/Pravasta/MadangApp',
     color: 'from-orange-500/20 to-yellow-500/20',
-  },
-  {
-    title: 'Small Chat Using GO-WebSocket',
-    description: 'A real-time chat application built with Flutter for the frontend and Go for the backend, utilizing WebSocket technology to enable instant messaging capabilities. This project demonstrates the integration of a high-performance Go server that manages WebSocket connections, allowing users to send and receive messages in real-time with minimal latency. The Flutter frontend provides a user-friendly interface for seamless communication, showcasing the power of combining these technologies for efficient and responsive chat applications.',
-    image: '🔌',
-    technologies: ['Flutter', 'Go', 'WebSocket'],
-    github: 'https://github.com/Pravasta/chat_flutter_go_socket',
-    demo: 'https://github.com/Pravasta/chat_flutter_go_socket',
-    color: 'from-green-500/20 to-emerald-500/20',
-  },
-  {
-    title: 'More Projects',
-    description: 'For more of my projects, please visit my GitHub profile.',
-    image: '🚀',
-    technologies: ['Flutter', 'Dart', 'Firebase'],
-    github: 'https://github.com/Pravasta',
-    demo: 'https://github.com/Pravasta',
-    color: 'from-indigo-500/20 to-blue-500/20',
   },
 ];
 

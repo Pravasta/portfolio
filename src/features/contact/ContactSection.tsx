@@ -5,7 +5,7 @@ import { SectionTitle } from '@/components/SectionTitle/SectionTitle';
 
 const contactInfo = [
   { icon: Mail, label: 'Email', value: 'fitrayanaf15@gmail.com', href: 'https://mail.google.com/mail/u/0/#inbox?compose=CllgCJlJWKzXcWpWBXhqzgCNdHqXzVGTfTmbntDCfNRKCzgRwsVqmPxzxrtnkXHGkQbNXhhcBLB' },
-  { icon: MapPin, label: 'Location', value: 'Cibubur, Bekasi', href: 'https://maps.app.goo.gl/YoYLXAtQoR1BPfTEA' },
+  { icon: MapPin, label: 'Location', value: 'Ciganjut, Jakarta Selatan', href: 'https://www.google.com/maps/place/Ciganjur,+Jagakarsa,+South+Jakarta+City,+Jakarta/@-6.3334499,106.8003583,15z/data=!3m1!4b1!4m6!3m5!1s0x2e69ee7bc62b7ebd:0x2cb3c46f42348c4c!8m2!3d-6.3364805!4d106.8062503!16s%2Fg%2F12hhhfdqn?entry=ttu&g_ep=EgoyMDI2MDYwMy4xIKXMDSoASAFQAw%3D%3D' },
 ];
 
 const socialLinks = [
