@@ -24,3 +24,8 @@ dist-ssr
 *.sw?
 documents/
 prompt.txt
+
+# Claude Code
+CLAUDE.md
+CLAUDE.local.md
+.claude/
