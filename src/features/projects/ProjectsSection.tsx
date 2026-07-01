@@ -14,24 +14,6 @@ import {
 import { useState } from 'react';
 
 const projects = [
-  // {
-  //   title: 'JualinFnb (Launching Soon)',
-  //   description:
-  //     'An all-in-one Point of Sale platform for food and beverage businesses, built by a team of three founders. I contribute to the development of the Flutter application while collaborating on product design, system architecture, and feature planning. The platform includes a cashier app, business dashboard, and landing page, with support for inventory management, reporting, multi-store operations, and resilient online-first transactions with offline fallback capabilities.',
-  //   image: '🚀',
-  //   technologies: [
-  //     'Flutter',
-  //     'Node.js',
-  //     'React',
-  //     'PostgreSQL',
-  //     'SQLite',
-  //     'Figma',
-  //     'REST API',
-  //   ],
-  //   github: '#',
-  //   demo: '#',
-  //   color: 'from-sky-500/20 to-blue-500/20',
-  // },
   {
     title: 'Point of Sale (POS) System',
     description:

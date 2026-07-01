@@ -15,21 +15,22 @@ const services = [
       "Android",
       "iOS",
       "Figma",
-      "Git",
+      "Cross-Platform Development"
     ],
   },
   {
     icon: Server,
     title: "Backend Development",
     description:
-      "Developing scalable backend services and RESTful APIs using Go and Laravel. Experienced in database design, authentication, and real-time application features.",
+      "Developing scalable backend services and RESTful APIs using Go. Experienced in database design, authentication, and real-time application features.",
     technologies: [
       "Go",
-      "Laravel",
       "PHP",
       "MySQL",
       "PostgreSQL",
       "REST API",
+      "WebSocket",
+      "Real-Time Communication"
     ],
   },
   {
@@ -42,8 +43,8 @@ const services = [
       "Supabase",
       "Google Cloud",
       "API Integration",
-      "Authentication",
-      "Cloud Storage",
+      "Cloud Flare R2",
+      "Cloud Storage"
     ],
   },
 ];
