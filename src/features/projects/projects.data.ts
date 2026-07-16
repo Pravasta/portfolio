@@ -46,6 +46,39 @@ const AI_PAIR = 'Claude (AI Pair Programming)';
 
 const projectList: Project[] = [
   {
+    slug: 'payment-service',
+    title: 'Payment Service',
+    summary: 'Centralized payment service powering multiple SaaS applications.',
+    description:
+      'A centralized payment service built with Golang and PostgreSQL to serve multiple SaaS applications.\n\n' +
+      '• Designed with Clean Architecture — clear separation between domain, use cases, infrastructure, and external adapters\n' +
+      '• RESTful APIs for payment processing, transaction lifecycle, and webhook handling\n' +
+      '• DOKU Payment Gateway integration through an extensible gateway abstraction, ready for multiple payment providers\n' +
+      '• PostgreSQL schemas and a payment state machine for reliable transaction processing\n' +
+      '• Secure cryptographic signature generation and verification for DOKU API communication\n' +
+      '• Containerized with Docker and Docker Compose for consistent development environments\n' +
+      '• APIs documented and tested with Swagger/OpenAPI',
+    emoji: '💳',
+    color: 'from-indigo-500/20 to-violet-500/20',
+    category: 'Backend Service',
+    year: '2025',
+    role: 'Backend Developer',
+    technologies: [
+      'Go',
+      'PostgreSQL',
+      'Docker',
+      'Docker Compose',
+      'REST API',
+      'Clean Architecture',
+      'DOKU Payment Gateway',
+      'Swagger/OpenAPI',
+    ],
+    cover: img('payment-service', 'cover.jpg'),
+    gallery: gallery('payment-service', 2, 'jpg'),
+    liveUrl: 'https://pravasta.github.io/payment-service/api-documentation/',
+    // sourceUrl omitted — source is private.
+  },
+  {
     slug: 'invoice-saas',
     title: 'Invoice SaaS',
     summary: 'Full-stack SaaS for streamlined invoice management.',
