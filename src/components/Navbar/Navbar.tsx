@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { usePortfolioStore } from '@/store/PortfolioStore';
 
@@ -15,6 +16,8 @@ const navItems = [
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const { isNavOpen, setNavOpen, activeSection, setActiveSection } = usePortfolioStore();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,10 +43,15 @@ export const Navbar = () => {
 
   const handleNavClick = (href: string) => {
     setNavOpen(false);
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    const id = href.slice(1);
+
+    // On a subpage (e.g. /projects), route home first, then scroll to the section.
+    if (location.pathname !== '/') {
+      navigate(`/#${id}`);
+      return;
     }
+
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -60,7 +68,11 @@ export const Navbar = () => {
           {/* Logo */}
           <motion.a
             href="#home"
-            className="text-xl md:text-2xl font-bold gradient-text"
+            onClick={(e) => {
+              e.preventDefault();
+              handleNavClick('#home');
+            }}
+            className="text-xl md:text-2xl font-bold gradient-text cursor-pointer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
