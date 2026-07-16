@@ -68,7 +68,7 @@ export const SkillsSection = () => {
           subtitle="A comprehensive overview of my technical expertise"
         />
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
