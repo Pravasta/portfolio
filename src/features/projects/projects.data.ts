@@ -83,7 +83,13 @@ const projectList: Project[] = [
     title: 'Invoice SaaS',
     summary: 'Full-stack SaaS for streamlined invoice management.',
     description:
-      'A full-stack SaaS application developed as a personal project to streamline invoice management for businesses. It includes authentication, business profiles, client and product management, tax configuration, invoice generation, PDF export, printing, reporting, and a subscription-ready architecture with a secure REST API.',
+      'A multi-tenant invoicing SaaS platform for small and medium businesses.\n\n' +
+      '• Built mobile applications using Flutter and the web dashboard using Next.js\n' +
+      '• Designed and implemented RESTful APIs using Golang\n' +
+      '• Developed invoice, client, item, and tax management modules\n' +
+      '• Designed PostgreSQL database schemas and optimized backend performance\n' +
+      '• Containerized services using Docker for development and deployment\n' +
+      '• Collaborated using Git workflow, pull requests, and code reviews',
     emoji: '🧾',
     color: 'from-emerald-500/20 to-teal-500/20',
     category: 'Full-Stack SaaS',
@@ -110,13 +116,16 @@ const projectList: Project[] = [
     title: 'Point of Sale (POS) System',
     summary: 'Multi-platform, offline-first POS built with Flutter.',
     description:
-      'Professional project developed at PT Sadavir Utama Nusamedia. A multi-platform POS solution built with Flutter for Android, iOS, macOS, and Linux. Features include offline-first transactions using SQLite, real-time synchronization via WebSocket, inventory management, receipt printing, cashier operations, QR/barcode scanning, and POS hardware integration. Currently in final development and preparing for production release.',
+      'Professional project developed at PT Sadavir Utama Nusamedia — a multi-platform POS system built with Flutter and Node.js, currently preparing for release.\n\n' +
+      '• Implemented an offline-first system using SQLite\n' +
+      '• Real-time synchronization using WebSocket\n' +
+      '• Integrated POS hardware devices (receipt printers, QR/barcode scanners)',
     emoji: '🛒',
     color: 'from-blue-500/20 to-cyan-500/20',
     category: 'Cross-Platform App',
     year: '2024',
     role: 'Mobile Developer',
-    technologies: ['Flutter', 'Go', 'SQLite', 'WebSocket', 'MySQL', 'Firebase'],
+    technologies: ['Flutter', 'Node.js', 'SQLite', 'WebSocket', 'MySQL', 'Firebase'],
     cover: img('pos-system', 'cover.png'),
     gallery: gallery('pos-system', 8, 'png'),
     // liveUrl & sourceUrl omitted — proprietary company project.
@@ -126,7 +135,11 @@ const projectList: Project[] = [
     title: 'Infusion Monitoring System',
     summary: 'Real-time healthcare monitoring with live alerts.',
     description:
-      'A real-time healthcare monitoring application developed for client operations. Built using Flutter and Go with WebSocket technology to provide live infusion status updates, device identification, event monitoring, and critical alert notifications. Successfully deployed and actively used in operational environments.',
+      'A real-time infusion monitoring application that helps healthcare workers track infusion status efficiently — deployed and actively used in operational environments.\n\n' +
+      '• Implemented WebSocket for real-time event updates, integrated with Flutter Bloc for state management\n' +
+      '• Designed a scalable backend system in Go to handle multiple device connections and API requests\n' +
+      '• Utilized device identification to manage user sessions and ensure accurate notification delivery\n' +
+      '• Implemented an audio-based notification system for critical alerts',
     emoji: '🏥',
     color: 'from-red-500/20 to-orange-500/20',
     category: 'Healthcare',
@@ -143,7 +156,14 @@ const projectList: Project[] = [
     title: 'Qobiltu Indonesia',
     summary: 'Mobile app supporting the Islamic marriage process.',
     description:
-      'Mobile application developed for Qobiltu Indonesia, a platform supporting the Islamic marriage process including ta’aruf, nadzhor, and khitbah. Responsible for Flutter development, REST API integration, Firebase Authentication, analytics, push notifications, and implementation of the design system from Figma.',
+      'Mobile application for Qobiltu Indonesia, a platform supporting the Islamic marriage process including ta’aruf, nadzhor, and khitbah — built with Flutter.\n\n' +
+      '• Implemented responsive and reusable user interfaces based on the Figma design system\n' +
+      '• Integrated RESTful APIs to connect the mobile application with backend services\n' +
+      '• Integrated Firebase Authentication for user login and registration\n' +
+      '• Implemented Firebase Cloud Messaging (FCM) for push notifications\n' +
+      '• Configured Firebase Analytics to track user engagement and application events\n' +
+      '• Applied Clean Architecture and the BLoC pattern to improve maintainability and scalability\n' +
+      '• Collaborated with designers and backend developers using Trello and Git',
     emoji: '💍',
     color: 'from-purple-500/20 to-pink-500/20',
     category: 'Mobile App',
@@ -157,10 +177,14 @@ const projectList: Project[] = [
   },
   {
     slug: 'recycle-management',
-    title: 'Recycle Management System',
-    summary: 'Internal enterprise app for recycling operations.',
+    title: 'Recycle App (Renewit MDA)',
+    summary: 'Cross-platform recycling application for internal company use.',
     description:
-      'An internal enterprise application developed for recycling operations management. Built with Flutter to support cross-platform workflows, order management, material tracking, and operational reporting. Focused on responsive user interfaces, maintainable architecture, and seamless backend integration.',
+      'Renewit MDA — a cross-platform recycling application built with Flutter, targeting mobile, desktop, and Linux environments.\n\n' +
+      '• Built scalable and maintainable UI components following clean architecture principles\n' +
+      '• Optimized performance and layout adaptability for multiple screen sizes and operating systems\n' +
+      '• Collaborated on system integration and smooth communication between frontend and backend services\n' +
+      '• Deployed and published to Google Play Store and Apple App Store for internal company use (private distribution)',
     emoji: '♻️',
     color: 'from-green-500/20 to-emerald-500/20',
     category: 'Enterprise',
