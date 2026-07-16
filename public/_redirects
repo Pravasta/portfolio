@@ -1,0 +1,4 @@
+# Netlify SPA fallback: serve index.html for all routes so React Router
+# handles deep links like /projects/pos-system. Existing files (images,
+# assets) are still served directly — this only catches misses.
+/*  /index.html  200
