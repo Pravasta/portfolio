@@ -20,6 +20,20 @@ const services = [
     ],
   },
   {
+    icon: Code,
+    title: "Web Development",
+    description:
+      "Building responsive, modern web applications and dashboards with React and Next.js — from landing pages and portfolios to full SaaS platforms.",
+    technologies: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Vite",
+      "Responsive Design"
+    ],
+  },
+  {
     icon: Server,
     title: "Backend Development",
     description:
@@ -64,8 +78,8 @@ export const ServicesSection = () => {
           subtitle="Comprehensive solutions tailored to bring your ideas to life with cutting-edge technologies"
         />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.slice(0, 3).map((service, index) => (
+        <div className="grid md:grid-cols-2 gap-6">
+          {services.map((service, index) => (
             <AnimatedCard key={service.title} delay={index * 0.1}>
               <motion.div
                 whileHover={{ scale: 1.02 }}

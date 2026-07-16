@@ -13,6 +13,16 @@ const skillCategories = [
     ],
   },
   {
+    title: 'Web Development',
+    skills: [
+      'React',
+      'Next.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'Vite',
+    ],
+  },
+  {
     title: 'Backend & APIs',
     skills: [
       'Go',
