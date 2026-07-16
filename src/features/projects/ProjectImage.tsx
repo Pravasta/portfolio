@@ -9,6 +9,11 @@ interface ProjectImageProps {
   color: string;
   className?: string;
   emojiClassName?: string;
+  /**
+   * How the image fills its box. Use `cover` for thumbnails (crops to fill) and
+   * `contain` to show the whole image without cropping (letterboxed).
+   */
+  fit?: 'cover' | 'contain';
 }
 
 /**
@@ -23,6 +28,7 @@ export const ProjectImage = ({
   color,
   className = '',
   emojiClassName = 'text-6xl',
+  fit = 'cover',
 }: ProjectImageProps) => {
   const [failed, setFailed] = useState(false);
 
@@ -44,7 +50,7 @@ export const ProjectImage = ({
       alt={alt}
       loading="lazy"
       onError={() => setFailed(true)}
-      className={`object-cover ${className}`}
+      className={`${fit === 'contain' ? 'object-contain' : 'object-cover'} ${className}`}
     />
   );
 };

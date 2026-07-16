@@ -22,6 +22,8 @@ export interface Project {
   category: string;
   year: string;
   role: string;
+  /** Aspect of the screenshots — controls how the gallery frames them. Defaults to landscape. */
+  orientation?: 'landscape' | 'portrait';
   technologies: string[];
   /** Cover image (card thumbnail + detail hero). */
   cover: string;
@@ -34,12 +36,15 @@ export interface Project {
 }
 
 const img = (slug: string, name: string) => `/projects/${slug}/${name}`;
-const gallery = (slug: string, count = 5) =>
+const gallery = (slug: string, count = 5, ext: 'svg' | 'png' | 'jpg' | 'webp' = 'svg') =>
   Array.from({ length: count }, (_, i) =>
-    img(slug, `doc-${String(i + 1).padStart(2, '0')}.svg`),
+    img(slug, `doc-${String(i + 1).padStart(2, '0')}.${ext}`),
   );
 
-export const projects: Project[] = [
+/** Tag appended to every project — all were built with AI pair programming. */
+const AI_PAIR = 'Claude (AI Pair Programming)';
+
+const projectList: Project[] = [
   {
     slug: 'invoice-saas',
     title: 'Invoice SaaS',
@@ -51,9 +56,19 @@ export const projects: Project[] = [
     category: 'Full-Stack SaaS',
     year: '2024',
     role: 'Solo Developer',
-    technologies: ['Next.js', 'Go', 'PostgreSQL', 'Docker', 'Tailwind CSS', 'TypeScript'],
-    cover: img('invoice-saas', 'cover.svg'),
-    gallery: gallery('invoice-saas'),
+    technologies: [
+      'Next.js',
+      'Go',
+      'PostgreSQL',
+      'Docker',
+      'Tailwind CSS',
+      'TypeScript',
+      'Railway',
+      'Cloudflare R2',
+      'Vercel',
+    ],
+    cover: img('invoice-saas', 'cover.png'),
+    gallery: gallery('invoice-saas', 6, 'png'),
     liveUrl: 'https://jualin-invoices.vercel.app/',
     // sourceUrl omitted — source is private.
   },
@@ -69,8 +84,8 @@ export const projects: Project[] = [
     year: '2024',
     role: 'Mobile Developer',
     technologies: ['Flutter', 'Go', 'SQLite', 'WebSocket', 'MySQL', 'Firebase'],
-    cover: img('pos-system', 'cover.svg'),
-    gallery: gallery('pos-system', 6),
+    cover: img('pos-system', 'cover.png'),
+    gallery: gallery('pos-system', 8, 'png'),
     // liveUrl & sourceUrl omitted — proprietary company project.
   },
   {
@@ -85,8 +100,8 @@ export const projects: Project[] = [
     year: '2023',
     role: 'Mobile Developer',
     technologies: ['Flutter', 'Go', 'WebSocket', 'Bloc', 'REST API', 'VPS'],
-    cover: img('infusion-monitoring', 'cover.svg'),
-    gallery: gallery('infusion-monitoring'),
+    cover: img('infusion-monitoring', 'cover.jpg'),
+    gallery: gallery('infusion-monitoring', 2, 'jpg'),
     liveUrl: 'https://github.com/Pravasta/health_reminder',
     sourceUrl: 'https://github.com/Pravasta/health_reminder',
   },
@@ -101,10 +116,11 @@ export const projects: Project[] = [
     category: 'Mobile App',
     year: '2023',
     role: 'Flutter Developer',
+    orientation: 'portrait',
     technologies: ['Flutter', 'Firebase', 'REST API', 'Figma', 'Analytics'],
-    cover: img('qobiltu-indonesia', 'cover.svg'),
-    gallery: gallery('qobiltu-indonesia'),
-    liveUrl: 'https://qobiltu.id/',
+    cover: img('qobiltu-indonesia', 'cover.png'),
+    gallery: gallery('qobiltu-indonesia', 5, 'png'),
+    liveUrl: 'https://play.google.com/store/apps/details?id=id.qobiltu.mobileqobiltu&hl=id',
   },
   {
     slug: 'recycle-management',
@@ -134,12 +150,17 @@ export const projects: Project[] = [
     year: '2022',
     role: 'Solo Developer',
     technologies: ['Flutter', 'Dart', 'REST API'],
-    cover: img('madang-app', 'cover.svg'),
-    gallery: gallery('madang-app'),
+    cover: img('madang-app', 'cover.jpg'),
+    gallery: gallery('madang-app', 5, 'jpg'),
     liveUrl: 'https://github.com/Pravasta/MadangApp',
     sourceUrl: 'https://github.com/Pravasta/MadangApp',
   },
 ];
+
+export const projects: Project[] = projectList.map((p) => ({
+  ...p,
+  technologies: [...p.technologies, AI_PAIR],
+}));
 
 /** Projects shown on the home page (the rest live on /projects). */
 export const FEATURED_COUNT = 5;

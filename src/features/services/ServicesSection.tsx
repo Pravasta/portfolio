@@ -15,7 +15,8 @@ const services = [
       "Android",
       "iOS",
       "Figma",
-      "Cross-Platform Development"
+      "Cross-Platform Development",
+      
     ],
   },
   {
@@ -30,7 +31,8 @@ const services = [
       "PostgreSQL",
       "REST API",
       "WebSocket",
-      "Real-Time Communication"
+      "Real-Time Communication",
+      
     ],
   },
   {
@@ -44,7 +46,8 @@ const services = [
       "Google Cloud",
       "API Integration",
       "Cloud Flare R2",
-      "Cloud Storage"
+      "Cloud Storage",
+      
     ],
   },
 ];

@@ -19,7 +19,8 @@ const techStack = [
   { name: 'Firebase', icon: 'https://skillicons.dev/icons?i=firebase' },
   { name: 'Supabase', icon: 'https://skillicons.dev/icons?i=supabase' },
   { name: 'Sqlite', icon: 'https://skillicons.dev/icons?i=sqlite' },
-  { name: 'Android Studio', icon: 'https://skillicons.dev/icons?i=androidstudio' }
+  { name: 'Android Studio', icon: 'https://skillicons.dev/icons?i=androidstudio' },
+  { name: 'Claude', icon: '/icons/claude.svg' }
 ];
 
 export const HeroSection = () => {

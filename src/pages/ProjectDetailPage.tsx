@@ -52,6 +52,13 @@ const ProjectDetailPage = () => {
     { label: 'Role', value: project.role },
   ];
 
+  // Portrait (mobile) screenshots get phone-shaped tiles; landscape stays 16:9.
+  const isPortrait = project.orientation === 'portrait';
+  const tileAspect = isPortrait ? 'aspect-[9/16]' : 'aspect-video';
+  const galleryCols = isPortrait
+    ? 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-4'
+    : 'grid-cols-2 md:grid-cols-3';
+
   const showLightbox = (i: number) => setLightbox(i);
   const closeLightbox = () => setLightbox(null);
   const step = (dir: 1 | -1) =>
@@ -91,13 +98,14 @@ const ProjectDetailPage = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="glass-card rounded-2xl overflow-hidden mt-8 aspect-[16/9]"
+            className="glass-card rounded-2xl overflow-hidden mt-8 aspect-video bg-muted/30"
           >
             <ProjectImage
               src={project.cover}
               alt={`${project.title} cover`}
               emoji={project.emoji}
               color={project.color}
+              fit="contain"
               className="h-full w-full"
               emojiClassName="text-8xl"
             />
@@ -171,7 +179,7 @@ const ProjectDetailPage = () => {
           {project.gallery.length > 0 && (
             <section className="mt-16">
               <h2 className="text-xl font-semibold mb-6">Documentation</h2>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              <div className={`grid ${galleryCols} gap-4`}>
                 {project.gallery.map((src, i) => (
                   <motion.button
                     key={src}
@@ -181,7 +189,7 @@ const ProjectDetailPage = () => {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true, margin: '-40px' }}
                     transition={{ duration: 0.4, delay: (i % 3) * 0.05 }}
-                    className="glass-card rounded-xl overflow-hidden aspect-[4/3] group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                    className={`glass-card rounded-xl overflow-hidden ${tileAspect} bg-muted/30 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary`}
                     aria-label={`Open documentation image ${i + 1}`}
                   >
                     <ProjectImage
@@ -189,6 +197,7 @@ const ProjectDetailPage = () => {
                       alt={`${project.title} documentation ${i + 1}`}
                       emoji={project.emoji}
                       color={project.color}
+                      fit="contain"
                       className="h-full w-full transition-transform duration-500 group-hover:scale-105"
                       emojiClassName="text-5xl"
                     />
@@ -212,12 +221,17 @@ const ProjectDetailPage = () => {
         <DialogContent className="max-w-5xl border-0 bg-transparent p-0 shadow-none [&>button]:hidden">
           {lightbox !== null && (
             <div className="relative">
-              <div className="glass-card rounded-2xl overflow-hidden aspect-[16/10]">
+              <div
+                className={`glass-card rounded-2xl overflow-hidden bg-background/95 flex items-center justify-center mx-auto ${
+                  isPortrait ? 'h-[85vh] aspect-[9/16]' : 'aspect-video w-full'
+                }`}
+              >
                 <ProjectImage
                   src={project.gallery[lightbox]}
                   alt={`${project.title} documentation ${lightbox + 1}`}
                   emoji={project.emoji}
                   color={project.color}
+                  fit="contain"
                   className="h-full w-full"
                   emojiClassName="text-8xl"
                 />

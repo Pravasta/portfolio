@@ -40,6 +40,7 @@ const skillCategories = [
       'Postman',
       'VS Code',
       'Android Studio',
+      'Claude (AI Pair Programming)',
     ],
   },
 ];

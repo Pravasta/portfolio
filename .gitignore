@@ -25,6 +25,9 @@ dist-ssr
 documents/
 prompt.txt
 
+# Local source images (served copies live in public/projects/)
+docs/
+
 # Claude Code
 CLAUDE.md
 CLAUDE.local.md

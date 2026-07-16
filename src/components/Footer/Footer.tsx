@@ -100,9 +100,8 @@ export const Footer = () => {
           className="pt-8 border-t border-border/30 text-center"
         >
           <p className="text-sm text-muted-foreground flex items-center justify-center gap-1">
-            © {currentYear} Pravasta. Made with 
+            © {currentYear} Pravasta. Made with
             <Heart className="w-4 h-4 text-destructive inline fill-destructive" />
-            and Lovable
           </p>
         </motion.div>
       </div>

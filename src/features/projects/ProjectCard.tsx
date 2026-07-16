@@ -9,12 +9,7 @@ interface ProjectCardProps {
   index?: number;
 }
 
-const MAX_TAGS = 4;
-
 export const ProjectCard = ({ project, index = 0 }: ProjectCardProps) => {
-  const visibleTags = project.technologies.slice(0, MAX_TAGS);
-  const extraTags = project.technologies.length - visibleTags.length;
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -56,7 +51,7 @@ export const ProjectCard = ({ project, index = 0 }: ProjectCardProps) => {
           </div>
 
           <div className="flex flex-wrap gap-2 mt-auto">
-            {visibleTags.map((tech) => (
+            {project.technologies.map((tech) => (
               <span
                 key={tech}
                 className="text-xs px-2 py-1 rounded-md bg-primary/10 text-primary"
@@ -64,11 +59,6 @@ export const ProjectCard = ({ project, index = 0 }: ProjectCardProps) => {
                 {tech}
               </span>
             ))}
-            {extraTags > 0 && (
-              <span className="text-xs px-2 py-1 rounded-md bg-secondary/60 text-muted-foreground">
-                +{extraTags}
-              </span>
-            )}
           </div>
         </div>
       </Link>
